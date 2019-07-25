@@ -1,26 +1,30 @@
 import * as React from 'react';
 
 interface ArticleCardProps {
-  /** name description */
-  name: string;
-  /** background description */
-  background: string;
-  /** title description */
-  title?: string;
+  /** Image Url */
+  imageUrl: string;
+  /** Title of the article */
+  title: string;
+  /** Description of the article */
+  description: string;
+  /** URL link to the entire article */
+  url: string;
 }
 
 /**
- * General component description in JSDoc format. Markdown is *supported*.
+ * Card used for articles.
  */
 
 export const ArticleCard: React.FC<ArticleCardProps> = ({
-  name = 'Hello',
-  background = 'blue',
-  /** title description */
-  title = 'Hello',
+  imageUrl = '',
+  title = '',
+  description = '',
+  url = '',
 }) => (
-    <div style={{ background: background, height: '200px', width: '300px', color: 'black' }}>
-      Card name : {name}<br />
-      title: {title}
+    <div style={{ padding: '20px', height: '100%', width: '100%', color: 'black', margin: '0 auto' }}>
+      <img src={imageUrl} alt='article' width={'100px'} height={'100px'}/><br />
+      Title : {title}<br />
+      Description: {description}<br />
+      Read the full artilce <a href={url}>here</a>
     </div>
   );
