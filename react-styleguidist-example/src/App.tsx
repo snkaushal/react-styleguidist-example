@@ -1,6 +1,6 @@
-import React from 'react';
+import * as React from 'react';
 import './App.css';
-import { ArticleCard } from './components/ArticleCard/ArticleCard';
+import { ArticleCard } from './lib/components/Cards/ArticleCard/ArticleCard';
 
 const App: React.FC = () => {
   return (
