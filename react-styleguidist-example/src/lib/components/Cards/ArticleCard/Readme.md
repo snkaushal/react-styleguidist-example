@@ -1,11 +1,5 @@
 Article Card examples:
 
-How to import?
-
-```jsx static
-import ArticleCard from 'lib/components/Cards/ArticleCard';
-```
-
 Article with title, description, imageUrl and url.
 
 ```jsx

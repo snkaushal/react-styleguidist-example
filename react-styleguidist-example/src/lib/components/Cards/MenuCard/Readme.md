@@ -1,11 +1,5 @@
 Menu Card examples:
 
-How to import?
-
-```jsx static
-import MenuCard from 'lib/components/Cards/MenuCard';
-```
-
 MenuCard with name, clickHandler, imageUrl and location.
 
 ```jsx
