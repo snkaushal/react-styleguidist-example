@@ -11,25 +11,18 @@ module.exports = {
   },
   sections: [
     {
-      name: 'Lib',
-      content: 'src/lib/Readme.md',
-      components: 'src/lib/*/*.{js,jsx,ts,tsx}',
+      name: 'Components',
+      content: 'src/lib/components/Readme.md',
+      components: () => ['src/lib/components/*/*/*.{js,jsx,ts,tsx}'],
       sections: [
         {
-          name: 'Components',
-          content: 'src/lib/components/Readme.md',
-          components: () => ['src/lib/components/*/*.{js,jsx,ts,tsx}'],
-          sections: [
-            {
-              name: 'Cards',
-              content: 'src/lib/components/Cards/Readme.md',
-              components: () => ['src/lib/components/Cards/*/*.{js,jsx,ts,tsx}'],
-              usageMode: 'expand',
-            }
-          ]
+          name: 'Cards',
+          content: 'src/lib/components/Cards/Readme.md',
+          components: () => ['src/lib/components/Cards/*/*.{js,jsx,ts,tsx}'],
         }
       ],
-    }
+      sectionDepth: 2,
+    },
   ],
   propsParser: require('react-docgen-typescript').withCustomConfig('./tsconfig.json').parse,
   resolver: require('react-docgen').resolver.findAllComponentDefinitions,
